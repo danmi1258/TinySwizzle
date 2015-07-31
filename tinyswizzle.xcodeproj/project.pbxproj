@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E6AC5EF1B629640006EA99D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6AC5EE1B629640006EA99D /* Foundation.framework */; };
+		1E6AC6071B629685006EA99D /* TinySwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6061B629685006EA99D /* TinySwizzle.h */; };
+		1E6AC6091B629697006EA99D /* execmem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6081B629697006EA99D /* execmem.h */; };
+		1E6AC61F1B6299CB006EA99D /* execmem_darwin.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC61D1B6299CB006EA99D /* execmem_darwin.c */; };
+		1E6AC6201B6299CB006EA99D /* execmem_darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC61E1B6299CB006EA99D /* execmem_darwin.h */; };
+		1E6AC6231B6299D4006EA99D /* execmem_android.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6211B6299D4006EA99D /* execmem_android.c */; };
+		1E6AC6241B6299D4006EA99D /* execmem_android.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6221B6299D4006EA99D /* execmem_android.h */; };
+		1E6AC6271B6299DC006EA99D /* execmem_generic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6251B6299DC006EA99D /* execmem_generic.c */; };
+		1E6AC6281B6299DC006EA99D /* execmem_generic.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6261B6299DC006EA99D /* execmem_generic.h */; };
+		1E6AC62E1B629BC3006EA99D /* swizzle_objc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC62D1B629BC3006EA99D /* swizzle_objc.c */; };
+		1E6AC6361B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6311B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */; };
+		1E6AC6371B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6331B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */; };
+		1E6AC6381B62A3CF006EA99D /* substitute_execmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6341B62A3CF006EA99D /* substitute_execmem.c */; };
+		1E6AC6391B62A3CF006EA99D /* substitute_manual-syscall.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6351B62A3CF006EA99D /* substitute_manual-syscall.h */; };
+		1E6AC63F1B62A43F006EA99D /* htab.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC63B1B62A43F006EA99D /* htab.h */; };
+		1E6AC6401B62A43F006EA99D /* misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC63C1B62A43F006EA99D /* misc.h */; };
+		1E6AC6411B62A43F006EA99D /* vec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC63D1B62A43F006EA99D /* vec.c */; };
+		1E6AC6421B62A43F006EA99D /* vec.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC63E1B62A43F006EA99D /* vec.h */; };
+		1E6AC6441B62A49E006EA99D /* substitute_mach-decls.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6431B62A49E006EA99D /* substitute_mach-decls.h */; };
+		1E6AC6461B62A4BE006EA99D /* substitute.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6451B62A4BE006EA99D /* substitute.h */; };
+		1E6AC6481B62A4D4006EA99D /* substitute-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6471B62A4D4006EA99D /* substitute-internal.h */; };
+		1E6AC64A1B62A512006EA99D /* misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6491B62A512006EA99D /* misc.h */; };
+		1E6AC64C1B62A51E006EA99D /* misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC64B1B62A51E006EA99D /* misc.h */; };
+		1E6AC6531B62A587006EA99D /* generic-dis-arm.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC64E1B62A587006EA99D /* generic-dis-arm.inc.h */; };
+		1E6AC6541B62A587006EA99D /* generic-dis-arm64.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC64F1B62A587006EA99D /* generic-dis-arm64.inc.h */; };
+		1E6AC6551B62A587006EA99D /* generic-dis-thumb.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6501B62A587006EA99D /* generic-dis-thumb.inc.h */; };
+		1E6AC6561B62A587006EA99D /* generic-dis-thumb2.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6511B62A587006EA99D /* generic-dis-thumb2.inc.h */; };
+		1E6AC6571B62A587006EA99D /* manual-mach.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6521B62A587006EA99D /* manual-mach.inc.h */; };
+		1E6AC6591B62A5C8006EA99D /* substitute_execmem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6581B62A5C8006EA99D /* substitute_execmem.h */; };
+		1E6AC6621B62A8B3006EA99D /* swizzle_c_arm.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6601B62A8B3006EA99D /* swizzle_c_arm.c */; };
+		1E6AC6631B62A8B3006EA99D /* swizzle_c_arm.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6611B62A8B3006EA99D /* swizzle_c_arm.h */; };
+		1E6AC6661B62A8C3006EA99D /* swizzle_c_arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6641B62A8C3006EA99D /* swizzle_c_arm64.c */; };
+		1E6AC6671B62A8C3006EA99D /* swizzle_c_arm64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6651B62A8C3006EA99D /* swizzle_c_arm64.h */; };
+		1E6AC67A1B62AEAD006EA99D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6791B62AEAD006EA99D /* main.c */; };
+		1E6AC67E1B62AFB2006EA99D /* libtinyswizzle.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6AC5EB1B629640006EA99D /* libtinyswizzle.dylib */; };
+		1EAF0F5E1B66F80E00D2B2DF /* TinySwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC6061B629685006EA99D /* TinySwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EAF0F841B67EC4C00D2B2DF /* trampoline.S in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC65B1B62A79F006EA99D /* trampoline.S */; };
+		1EAF0F851B67EF5500D2B2DF /* trampoline.S in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC6681B62A8D1006EA99D /* trampoline.S */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E6AC5EB1B629640006EA99D /* libtinyswizzle.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtinyswizzle.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6AC5EE1B629640006EA99D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1E6AC5F01B629640006EA99D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1E6AC5F91B629640006EA99D /* tinyswizzle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tinyswizzle-Prefix.pch"; sourceTree = "<group>"; };
+		1E6AC6061B629685006EA99D /* TinySwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinySwizzle.h; sourceTree = "<group>"; };
+		1E6AC6081B629697006EA99D /* execmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execmem.h; sourceTree = "<group>"; };
+		1E6AC61D1B6299CB006EA99D /* execmem_darwin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = execmem_darwin.c; sourceTree = "<group>"; };
+		1E6AC61E1B6299CB006EA99D /* execmem_darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execmem_darwin.h; sourceTree = "<group>"; };
+		1E6AC6211B6299D4006EA99D /* execmem_android.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = execmem_android.c; sourceTree = "<group>"; };
+		1E6AC6221B6299D4006EA99D /* execmem_android.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execmem_android.h; sourceTree = "<group>"; };
+		1E6AC6251B6299DC006EA99D /* execmem_generic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = execmem_generic.c; sourceTree = "<group>"; };
+		1E6AC6261B6299DC006EA99D /* execmem_generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execmem_generic.h; sourceTree = "<group>"; };
+		1E6AC62D1B629BC3006EA99D /* swizzle_objc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swizzle_objc.c; sourceTree = "<group>"; };
+		1E6AC6311B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "substitute_arch-transform-dis.inc.h"; sourceTree = "<group>"; };
+		1E6AC6331B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "substitute_arch-transform-dis.inc.h"; sourceTree = "<group>"; };
+		1E6AC6341B62A3CF006EA99D /* substitute_execmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = substitute_execmem.c; sourceTree = "<group>"; };
+		1E6AC6351B62A3CF006EA99D /* substitute_manual-syscall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "substitute_manual-syscall.h"; sourceTree = "<group>"; };
+		1E6AC63B1B62A43F006EA99D /* htab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htab.h; sourceTree = "<group>"; };
+		1E6AC63C1B62A43F006EA99D /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		1E6AC63D1B62A43F006EA99D /* vec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec.c; sourceTree = "<group>"; };
+		1E6AC63E1B62A43F006EA99D /* vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec.h; sourceTree = "<group>"; };
+		1E6AC6431B62A49E006EA99D /* substitute_mach-decls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "substitute_mach-decls.h"; sourceTree = "<group>"; };
+		1E6AC6451B62A4BE006EA99D /* substitute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substitute.h; sourceTree = "<group>"; };
+		1E6AC6471B62A4D4006EA99D /* substitute-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "substitute-internal.h"; sourceTree = "<group>"; };
+		1E6AC6491B62A512006EA99D /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		1E6AC64B1B62A51E006EA99D /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		1E6AC64E1B62A587006EA99D /* generic-dis-arm.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "generic-dis-arm.inc.h"; sourceTree = "<group>"; };
+		1E6AC64F1B62A587006EA99D /* generic-dis-arm64.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "generic-dis-arm64.inc.h"; sourceTree = "<group>"; };
+		1E6AC6501B62A587006EA99D /* generic-dis-thumb.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "generic-dis-thumb.inc.h"; sourceTree = "<group>"; };
+		1E6AC6511B62A587006EA99D /* generic-dis-thumb2.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "generic-dis-thumb2.inc.h"; sourceTree = "<group>"; };
+		1E6AC6521B62A587006EA99D /* manual-mach.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "manual-mach.inc.h"; sourceTree = "<group>"; };
+		1E6AC6581B62A5C8006EA99D /* substitute_execmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substitute_execmem.h; sourceTree = "<group>"; };
+		1E6AC65A1B62A67A006EA99D /* os_decls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = os_decls.h; sourceTree = "<group>"; };
+		1E6AC65B1B62A79F006EA99D /* trampoline.S */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = trampoline.S; sourceTree = "<group>"; };
+		1E6AC6601B62A8B3006EA99D /* swizzle_c_arm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swizzle_c_arm.c; sourceTree = "<group>"; };
+		1E6AC6611B62A8B3006EA99D /* swizzle_c_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swizzle_c_arm.h; sourceTree = "<group>"; };
+		1E6AC6641B62A8C3006EA99D /* swizzle_c_arm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swizzle_c_arm64.c; sourceTree = "<group>"; };
+		1E6AC6651B62A8C3006EA99D /* swizzle_c_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swizzle_c_arm64.h; sourceTree = "<group>"; };
+		1E6AC6681B62A8D1006EA99D /* trampoline.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = trampoline.S; sourceTree = "<group>"; };
+		1E6AC66E1B62AEAD006EA99D /* tinyswizzle_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tinyswizzle_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6AC6791B62AEAD006EA99D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E6AC5E71B629640006EA99D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6AC5EF1B629640006EA99D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6AC66B1B62AEAD006EA99D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6AC67E1B62AFB2006EA99D /* libtinyswizzle.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E6AC5E11B629640006EA99D = {
+			isa = PBXGroup;
+			children = (
+				1E6AC5F21B629640006EA99D /* tinyswizzle */,
+				1E6AC66F1B62AEAD006EA99D /* tinyswizzle_test */,
+				1E6AC5ED1B629640006EA99D /* Frameworks */,
+				1E6AC5EC1B629640006EA99D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E6AC5EC1B629640006EA99D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC5EB1B629640006EA99D /* libtinyswizzle.dylib */,
+				1E6AC66E1B62AEAD006EA99D /* tinyswizzle_test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E6AC5ED1B629640006EA99D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC5EE1B629640006EA99D /* Foundation.framework */,
+				1E6AC5F01B629640006EA99D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E6AC5F21B629640006EA99D /* tinyswizzle */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6061B629685006EA99D /* TinySwizzle.h */,
+				1E6AC62D1B629BC3006EA99D /* swizzle_objc.c */,
+				1E6AC65A1B62A67A006EA99D /* os_decls.h */,
+				1E6AC6081B629697006EA99D /* execmem.h */,
+				1E6AC60D1B6296DB006EA99D /* darwin */,
+				1E6AC60A1B6296DB006EA99D /* android */,
+				1E6AC6161B629878006EA99D /* generic */,
+				1E6AC60B1B6296DB006EA99D /* arm */,
+				1E6AC60C1B6296DB006EA99D /* arm64 */,
+				1E6AC5F71B629640006EA99D /* Supporting Files */,
+			);
+			path = tinyswizzle;
+			sourceTree = "<group>";
+		};
+		1E6AC5F71B629640006EA99D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC5F91B629640006EA99D /* tinyswizzle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E6AC60A1B6296DB006EA99D /* android */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6211B6299D4006EA99D /* execmem_android.c */,
+				1E6AC6221B6299D4006EA99D /* execmem_android.h */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		1E6AC60B1B6296DB006EA99D /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC65B1B62A79F006EA99D /* trampoline.S */,
+				1E6AC6601B62A8B3006EA99D /* swizzle_c_arm.c */,
+				1E6AC6611B62A8B3006EA99D /* swizzle_c_arm.h */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		1E6AC60C1B6296DB006EA99D /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6681B62A8D1006EA99D /* trampoline.S */,
+				1E6AC6641B62A8C3006EA99D /* swizzle_c_arm64.c */,
+				1E6AC6651B62A8C3006EA99D /* swizzle_c_arm64.h */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		1E6AC60D1B6296DB006EA99D /* darwin */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC62F1B62A3CF006EA99D /* substitute */,
+				1E6AC61D1B6299CB006EA99D /* execmem_darwin.c */,
+				1E6AC61E1B6299CB006EA99D /* execmem_darwin.h */,
+			);
+			path = darwin;
+			sourceTree = "<group>";
+		};
+		1E6AC6161B629878006EA99D /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6251B6299DC006EA99D /* execmem_generic.c */,
+				1E6AC6261B6299DC006EA99D /* execmem_generic.h */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		1E6AC62F1B62A3CF006EA99D /* substitute */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6581B62A5C8006EA99D /* substitute_execmem.h */,
+				1E6AC64D1B62A587006EA99D /* generated */,
+				1E6AC6471B62A4D4006EA99D /* substitute-internal.h */,
+				1E6AC6451B62A4BE006EA99D /* substitute.h */,
+				1E6AC6431B62A49E006EA99D /* substitute_mach-decls.h */,
+				1E6AC63A1B62A43F006EA99D /* cbit */,
+				1E6AC6301B62A3CF006EA99D /* arm */,
+				1E6AC6321B62A3CF006EA99D /* arm64 */,
+				1E6AC6341B62A3CF006EA99D /* substitute_execmem.c */,
+				1E6AC6351B62A3CF006EA99D /* substitute_manual-syscall.h */,
+			);
+			path = substitute;
+			sourceTree = "<group>";
+		};
+		1E6AC6301B62A3CF006EA99D /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6491B62A512006EA99D /* misc.h */,
+				1E6AC6311B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		1E6AC6321B62A3CF006EA99D /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC64B1B62A51E006EA99D /* misc.h */,
+				1E6AC6331B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		1E6AC63A1B62A43F006EA99D /* cbit */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC63B1B62A43F006EA99D /* htab.h */,
+				1E6AC63C1B62A43F006EA99D /* misc.h */,
+				1E6AC63D1B62A43F006EA99D /* vec.c */,
+				1E6AC63E1B62A43F006EA99D /* vec.h */,
+			);
+			path = cbit;
+			sourceTree = "<group>";
+		};
+		1E6AC64D1B62A587006EA99D /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC64E1B62A587006EA99D /* generic-dis-arm.inc.h */,
+				1E6AC64F1B62A587006EA99D /* generic-dis-arm64.inc.h */,
+				1E6AC6501B62A587006EA99D /* generic-dis-thumb.inc.h */,
+				1E6AC6511B62A587006EA99D /* generic-dis-thumb2.inc.h */,
+				1E6AC6521B62A587006EA99D /* manual-mach.inc.h */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+		1E6AC66F1B62AEAD006EA99D /* tinyswizzle_test */ = {
+			isa = PBXGroup;
+			children = (
+				1E6AC6791B62AEAD006EA99D /* main.c */,
+			);
+			path = tinyswizzle_test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E6AC5E81B629640006EA99D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6AC6421B62A43F006EA99D /* vec.h in Headers */,
+				1E6AC6571B62A587006EA99D /* manual-mach.inc.h in Headers */,
+				1E6AC6671B62A8C3006EA99D /* swizzle_c_arm64.h in Headers */,
+				1E6AC6481B62A4D4006EA99D /* substitute-internal.h in Headers */,
+				1E6AC6541B62A587006EA99D /* generic-dis-arm64.inc.h in Headers */,
+				1E6AC6441B62A49E006EA99D /* substitute_mach-decls.h in Headers */,
+				1E6AC6461B62A4BE006EA99D /* substitute.h in Headers */,
+				1E6AC6401B62A43F006EA99D /* misc.h in Headers */,
+				1E6AC6361B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h in Headers */,
+				1E6AC6561B62A587006EA99D /* generic-dis-thumb2.inc.h in Headers */,
+				1E6AC6071B629685006EA99D /* TinySwizzle.h in Headers */,
+				1E6AC6531B62A587006EA99D /* generic-dis-arm.inc.h in Headers */,
+				1E6AC6551B62A587006EA99D /* generic-dis-thumb.inc.h in Headers */,
+				1E6AC6391B62A3CF006EA99D /* substitute_manual-syscall.h in Headers */,
+				1E6AC6631B62A8B3006EA99D /* swizzle_c_arm.h in Headers */,
+				1E6AC64C1B62A51E006EA99D /* misc.h in Headers */,
+				1E6AC6281B6299DC006EA99D /* execmem_generic.h in Headers */,
+				1E6AC6591B62A5C8006EA99D /* substitute_execmem.h in Headers */,
+				1E6AC63F1B62A43F006EA99D /* htab.h in Headers */,
+				1E6AC64A1B62A512006EA99D /* misc.h in Headers */,
+				1E6AC6091B629697006EA99D /* execmem.h in Headers */,
+				1E6AC6201B6299CB006EA99D /* execmem_darwin.h in Headers */,
+				1E6AC6371B62A3CF006EA99D /* substitute_arch-transform-dis.inc.h in Headers */,
+				1E6AC6241B6299D4006EA99D /* execmem_android.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EAF0F5D1B66F80900D2B2DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAF0F5E1B66F80E00D2B2DF /* TinySwizzle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E6AC5EA1B629640006EA99D /* tinyswizzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6AC6031B629640006EA99D /* Build configuration list for PBXNativeTarget "tinyswizzle" */;
+			buildPhases = (
+				1E6AC5E61B629640006EA99D /* Sources */,
+				1E6AC5E71B629640006EA99D /* Frameworks */,
+				1E6AC5E81B629640006EA99D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tinyswizzle;
+			productName = tinyswizzle;
+			productReference = 1E6AC5EB1B629640006EA99D /* libtinyswizzle.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		1E6AC66D1B62AEAD006EA99D /* tinyswizzle_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6AC67B1B62AEAD006EA99D /* Build configuration list for PBXNativeTarget "tinyswizzle_test" */;
+			buildPhases = (
+				1E6AC66A1B62AEAD006EA99D /* Sources */,
+				1E6AC66B1B62AEAD006EA99D /* Frameworks */,
+				1EAF0F5D1B66F80900D2B2DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tinyswizzle_test;
+			productName = tinyswizzle_test;
+			productReference = 1E6AC66E1B62AEAD006EA99D /* tinyswizzle_test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E6AC5E21B629640006EA99D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					1E6AC5EA1B629640006EA99D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					1E6AC66D1B62AEAD006EA99D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 1E6AC5E51B629640006EA99D /* Build configuration list for PBXProject "tinyswizzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E6AC5E11B629640006EA99D;
+			productRefGroup = 1E6AC5EC1B629640006EA99D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E6AC5EA1B629640006EA99D /* tinyswizzle */,
+				1E6AC66D1B62AEAD006EA99D /* tinyswizzle_test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E6AC5E61B629640006EA99D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAF0F851B67EF5500D2B2DF /* trampoline.S in Sources */,
+				1E6AC6381B62A3CF006EA99D /* substitute_execmem.c in Sources */,
+				1E6AC6621B62A8B3006EA99D /* swizzle_c_arm.c in Sources */,
+				1E6AC6231B6299D4006EA99D /* execmem_android.c in Sources */,
+				1E6AC61F1B6299CB006EA99D /* execmem_darwin.c in Sources */,
+				1E6AC6661B62A8C3006EA99D /* swizzle_c_arm64.c in Sources */,
+				1E6AC6411B62A43F006EA99D /* vec.c in Sources */,
+				1E6AC62E1B629BC3006EA99D /* swizzle_objc.c in Sources */,
+				1EAF0F841B67EC4C00D2B2DF /* trampoline.S in Sources */,
+				1E6AC6271B6299DC006EA99D /* execmem_generic.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6AC66A1B62AEAD006EA99D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6AC67A1B62AEAD006EA99D /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E6AC6011B629640006EA99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		1E6AC6021B629640006EA99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		1E6AC6041B629640006EA99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tinyswizzle/tinyswizzle-Prefix.pch";
+				INSTALL_PATH = /usr/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		1E6AC6051B629640006EA99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tinyswizzle/tinyswizzle-Prefix.pch";
+				INSTALL_PATH = /usr/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		1E6AC67C1B62AEAD006EA99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				INSTALL_PATH = /usr/bin;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		1E6AC67D1B62AEAD006EA99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				INSTALL_PATH = /usr/bin;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E6AC5E51B629640006EA99D /* Build configuration list for PBXProject "tinyswizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6AC6011B629640006EA99D /* Debug */,
+				1E6AC6021B629640006EA99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6AC6031B629640006EA99D /* Build configuration list for PBXNativeTarget "tinyswizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6AC6041B629640006EA99D /* Debug */,
+				1E6AC6051B629640006EA99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6AC67B1B62AEAD006EA99D /* Build configuration list for PBXNativeTarget "tinyswizzle_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6AC67C1B62AEAD006EA99D /* Debug */,
+				1E6AC67D1B62AEAD006EA99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E6AC5E21B629640006EA99D /* Project object */;
+}
