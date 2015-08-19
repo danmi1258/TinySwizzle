@@ -21,7 +21,7 @@ int manual_mprotect(void * a, size_t n, int p) {
     __asm__("svc 0x00");
     __asm__("bxpl LR");
 #else
-    return manual_mprotect(a, n, p);
+    return mprotect(a, n, p);
 #endif
 }
 
