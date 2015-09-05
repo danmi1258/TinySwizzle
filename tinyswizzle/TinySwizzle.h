@@ -41,7 +41,19 @@ static type $ ## name(args)
 __attribute__((__constructor__)) static void _TinyConstructor ## __COUNTER__(void)
 
 #if defined(__APPLE__)
+
 #include <objc/runtime.h>
+
+#define TinySwizzleInterface(target, swizzle, base) \
+@class target; \
+@interface $ ## swizzle : base { target *$self; } @end \
+@implementation $ ## swizzle \
++ (void) initialize {} \
+@end \
+@interface swizzle : $ ## swizzle @end \
+@implementation swizzle (TinySwizzleInterface) + (void) load { \
+TinySwizzleClasses(objc_getClass(#target), self, class_getSuperClass(self)); \
+} @end
 
 ts_return_t TinySwizzleMessage(Class klass, SEL selector, TSFunction replacement, TSFunction* original_ptr);
 ts_return_t TinySwizzleClasses(Class klass, Class replacement, Class original);
